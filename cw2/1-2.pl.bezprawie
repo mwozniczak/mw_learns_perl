@@ -1,0 +1,4 @@
+ #!/usr/bin/env perl -n
+## Copyright © 2016 Michał Woźniczak1
+## Copyright © 2016 Michał Woźniczak2
+ print if /P|perl/;

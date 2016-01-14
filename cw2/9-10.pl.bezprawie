@@ -1,0 +1,5 @@
+$^I = ".bezprawie";
+while (<>) {
+	s/^(#!.*$)\n[^#]/\1\n# Copyright © 2016 Michał Woźniczak/;
+	print;
+}
