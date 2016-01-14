@@ -1,12 +1,7 @@
 print "Podaj katalog: ";
 chomp ($dir = <STDIN>);
-$dir =~ s/^\s+|\s+$//g;
 
-if (!$dir) {
-  $dir = $ENV{'HOME'};
-}
+$dir = $ENV{'HOME'} if !$dir or $dir =~ /^\s+$/;
 -d $dir or die "Nie udało się :C\n";
 
-for (<$dir/*>) {
-  print "$_\n";
-}
+print "$_\n" for (<$dir/*>);
